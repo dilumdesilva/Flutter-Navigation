@@ -28,7 +28,9 @@ Basically, when you lunch the **first screen or route in Flutter**, In case of *
 ![cover](other/HowscreensarestackedinFlutt.gif)
 
 #### 2.1 Simple Routing 
-If you want to navigate to new page or if you want to navigate to the previous page/route/screen we user methods which has been exposed by the Flutter Navigator class/widget.  So, **push and pop** are the simplest methods that we can use to navigate back and forth among screens.
+If you want to [navigate to new page or if you want to navigate back to the previous page/route/screen](https://flutter.dev/docs/cookbook/navigation/navigation-basics) we user methods which has been exposed by the Flutter Navigator class/widget.  So, **push and pop** are the simplest methods that we can use to navigate back and forth among screens.
+
+**Check code samples under master branch to get a better understanding on this.**
 
 - **Push:** The push method is used to add another route onto the top of the current stack. The new page is displayed over the previous one.
 
@@ -44,5 +46,15 @@ If you want to navigate to new page or if you want to navigate to the previous p
       onPressed: (){  
 	      Navigator.pop(context);
 	  }
+Everything seems okay but,
+
+What if there's two buttons to navaigate back to the previous page (Something like android system back button) ?
+
+This is why Flutter has given us **[WillPopScope widget](https://api.flutter.dev/flutter/widgets/WillPopScope-class.html)**
+
+Do you wanna try check the code? then...
+
+    $ git checkout simple_routing
+
 
 #### 2.2 Named Routing
