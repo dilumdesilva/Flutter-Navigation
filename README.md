@@ -52,7 +52,7 @@ What if there's two buttons to navaigate back to the previous page (Something li
 
 This is why Flutter has given us **[WillPopScope widget](https://api.flutter.dev/flutter/widgets/WillPopScope-class.html)**
 
-Do you wanna try check the code? then...
+Do you wanna try out the code? then...
 
     $ git checkout simple_routing
 
