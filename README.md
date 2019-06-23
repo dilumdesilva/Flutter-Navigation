@@ -18,7 +18,7 @@ Under flutter navigation we will be disscussing following sub topics.
 	3.2 Data passing while named routing  
 
 ### 1. How screens are stacked in Flutter
-In flutter we identify screens as **'routes'** so, if we are talking about the home screen or the first screen, we are refering to the first route or the initial route of our application. 
+In flutter we identify screens as **'routes'** so, if we are talking about the home screen or the first screen, we are refering to the first route or the initial route of our application. So, a Route is an abstraction for a “screen” or “page” of an app.
 
 Flutter has provided **[navigator widget](https://api.flutter.dev/flutter/widgets/Navigator-class.html)** and its methods to naviagate among screens. Furthermore in flutter **navigator widget** maintains all the **routes** (screens) as stack. Also, as we all know stacks follow the concept of **LIFO** /Last In First Out. In Flutter also we have the same concept to manage the screens/routes stack
 
@@ -58,3 +58,36 @@ Do you wanna try out the code? then...
 
 
 #### 2.2 Named Routing
+
+The only difference in **Named Routing** approach is, we declare the routes in the main.dart file using routes () to use in further sections related to flutter. Please find the
+
+
+
+    class MyApp extends StatelessWidget {  
+      // This widget is the root of your application.  
+      @override  
+      Widget build(BuildContext context) {  
+        return MaterialApp(  
+          title: 'Flutter Demo',  
+          theme: ThemeData(  
+            primarySwatch: Colors.blue,  
+          ),
+	  
+      	 //Declaring routes 
+         routes: <String, WidgetBuilder>{  
+            '/page1': (BuildContext context) => new Page1(),  
+            '/page2': (BuildContext context) => new Page2(),  
+         },  
+      
+          home: Page1()  
+        );  
+      }  
+    }
+
+When we call the navigation related methods with our button action or any other user interaction this how we do it.
+
+    onPressed: (){  
+      Navigator.of(context).pushNamed('/page2');  
+    }
+
+Further more you can check the flutter dev guide related to the [Named Routing](https://flutter.dev/docs/cookbook/navigation/named-routes)
