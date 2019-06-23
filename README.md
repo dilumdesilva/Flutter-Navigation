@@ -4,13 +4,18 @@
 
 Under flutter navigation we will be disscussing following sub topics.
 
- 1. How screens are stacked in Flutter.
- 2. How to navigate back and forth among screens.
-	  2.1 Simple Routing 
-	  2.2 Named Routing 
- 3. How to send data back and forth while navigating among screens.
-	  3.1 Data passing while simple routing 
-	  3.2 Data passing while named routing  
+1. How screens are stacked in Flutter.
+2. How to navigate back and forth among screens.
+
+	2.1 Simple Routing 
+	
+	2.2 Named Routing 
+	
+3. How to send data back and forth while navigating among screens.
+
+	3.1 Data passing while simple routing 
+	
+	3.2 Data passing while named routing  
 
 ### 1. How screens are stacked in Flutter
 In flutter we identify screens as **'routes'** so, if we are talking about the home screen or the first screen, we are refering to the first route or the initial route of our application. 
